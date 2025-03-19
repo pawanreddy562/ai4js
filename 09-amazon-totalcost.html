@@ -1,0 +1,44 @@
+<html>
+    <head>
+           <title>
+            total calculator
+           </title>
+    </head>
+    <body>
+
+             <p> Amaazon total calculator</p>
+
+             <input class="js-amount-input" placeholder="cost of the items" onkeydown="
+             handleAmountKeyDown(event);
+             ">
+             <button onclick="
+             calculateTotal();
+             ">calculate</button>
+
+             <p class="js-total-amount"></p>
+                <script>
+               function calculateTotal(){
+                   let amount =  document.querySelector(".js-amount-input");
+                   amount = Number(amount.value);
+                   console.log(amount);
+                   console.log(typeof amount);
+                   if(amount < 40){
+                    amount +=10;
+                   }    
+                
+                   document.querySelector(".js-total-amount").innerHTML = `Total amount $${amount}`;
+                }
+
+
+                function handleAmountKeyDown(event){
+                    console.log(event.key);
+                          if(event.key === 'Enter'){
+                            calculateTotal();
+                          }
+                }
+
+
+             
+                 </script>
+    </body>
+</html>

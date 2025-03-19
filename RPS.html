@@ -71,20 +71,48 @@
            }
            
            localStorage.setItem('score',JSON.stringify(score));
-
-        alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
-        Wins: ${score.wins}, Lost: ${score.loose}, Tie ${score.tie}`);
+           updateMyResultElement(result);
+           updateConsolidateResultElement(playerMove,computerMove);
+           updateScoreElement();
+     
       }
+
+      function updateScoreElement(){
+          const res = ` Wins: ${score.wins}, Lost: ${score.loose}, Tie ${score.tie}`;
+        document.querySelector(".js-game-result").innerHTML =res;
+        }
+
+        function updateMyResultElement(result){
+          
+          document.querySelector(".js-myresult").innerHTML =result;
+        }
+
+        function updateConsolidateResultElement(yourmove, computermove){
+          document.querySelector(".js-collectivemessage-result").innerHTML =`Your move ${yourmove}, computer move ${computermove}`;
+        }
         </script>
         
     </head>
     <body>
-        <image src="Rock.PNG" onclick="yourMove('rock')"/>
-        <image src="paper.PNG" onclick="yourMove('paper')"/>
-        <image src="cissors.PNG" onclick="yourMove('scissors')"/>
+       
+        <button onclick="yourMove('rock')">Rock</button>
+        <button onclick="yourMove('paper')">Paper</button>
+        <button onclick="yourMove('scissors')">Scissors</button>
+        
+        <p class="js-myresult"></p>
+        <p class="js-collectivemessage-result"></p>
+        <p class="js-game-result"></p>
+        
+        <button onclick=" {  
+          score.wins=0;
+          score.loose =0;
+          score.tie = 0;
+          localStorage.removeItem('score');
+          const s = updateScoreElement();
 
-        <button onclick=" {  localStorage.removeItem('score');
+          
         } "> RESET COUNTS</button>
+
 
     </body>
 </html>
