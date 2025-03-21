@@ -6,12 +6,35 @@
     </head>
     <body>
 
+              <style>
+                      .cost-input{
+                        font-size: 15px;
+                        /*
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        padding-left: 10px;
+                        padding-bottom: 10px;
+                        */
+                        padding: 10px;
+                      }
+                      .calculate-button{
+                        background-color: green;
+                        color: bisque;
+                        padding: 10px 15px;
+                        font-size: 15px;
+                        font-weight: bold;
+                      }
+                      body{
+                        font-family: Arial;
+                      }
+              </style>
+
              <p> Amaazon total calculator</p>
 
-             <input class="js-amount-input" placeholder="cost of the items" onkeydown="
+             <input class="js-amount-input cost-input" placeholder="cost of the items" onkeydown="
              handleAmountKeyDown(event);
              ">
-             <button onclick="
+             <button class="calculate-button" onclick="
              calculateTotal();
              ">calculate</button>
 
