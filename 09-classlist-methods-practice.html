@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class list practice</title>
+         <p class="add-classlist"> this is default </p>   
+         <p class="remove-classlist"></p> 
+         <p class="js-classexxists-check"></p>
+        <style>
+            .add-classlist1{
+                     background-color: green;
+                     color: white;
+                     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .remove-classlist{
+                background-color: blue;
+                color: white;
+            }
+            .contains-classlist1{
+                background-color: orange;
+                color:black
+            }
+        </style>
+        <script>
+            function checklistExist(){
+                var c = document.querySelector(".add-classlist");
+                if(c.innerText==='Chanakya'){
+                    //c.innerHTML='navya';
+                    if(c.classList.contains('remove-classlist')){
+                        c.innerHTML='Navya';
+                        c.classList.remove('remove-classlist');
+                        c.classList.remove('add-classlist1');
+                        c.classList.add('contains-classlist1');
+                        
+
+                    }
+                }
+
+            }
+            function removecllist(){
+                var b = document.querySelector(".add-classlist");
+                if(b.innerText==='Vats'){
+                     b.innerHTML='Chanakya';
+                     b.classList.remove('add-classlist1');    
+                     b.classList.add('remove-classlist');
+                }
+
+            }
+             function f(){
+            let a = document.querySelector(".add-classlist");
+            a.innerHTML='Vats';
+            console.log(a);
+
+            if(c.classList.contains('remove-classlist') || c.classList.contains('contains-classlist1')){
+                        a.innerHTML='Navya';
+                        a.classList.remove('remove-classlist');
+                       // c.classList.remove('add-classlist1');
+                        a.classList.remove('contains-classlist1');
+                        a.classList.add('add-classlist1');
+
+                    }
+
+            a.classList.add('add-classlist1');
+            
+        } 
+            
+         </script>
+    </head>
+    <body>
+        <button onclick="f()">Add to Classlist</button>
+        <button onclick="removecllist()">Remove from Classlist</button>
+        <button onclick="checklistExist()">Check classlist</button>
+    </body>
+</html>
