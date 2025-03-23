@@ -19,13 +19,12 @@ function todoListHtmldsiplay(){
             const todoObj= Todo[i];
             const {name,duedate}=todoObj;
             let a = `
-                <p>
-                ${name} - ${duedate}
+                <div>${name}</div>  <div> ${duedate}</div>
                 <button onclick="
                    Todo.splice(${i},1);
                    todoListHtmldsiplay();
                 ">Delete</button>
-               <p>`;
+               `;
             listTodo += a; 
         }
         //console.log(listTodo);
