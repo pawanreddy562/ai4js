@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home work</title>
+    </head>
+    <body>
+       <script>
+        const array1=[10,20,30];
+        console.log(array1);
+        array1.length-1
+        //array1.splice(array1.length-1);
+        array1[array1.length-1]=100;
+        //array1.push(99);
+        console.log(array1);
+
+       function getLastValue(array0){
+        if(array0.isArray){
+            console.log(array0[array0.length-1]);
+        }     
+        console.log(array0[array0.length-1]);
+        const a =array0[0];
+        array0[0]=array0[array0.length-1];
+        array0[array0.length-1]=a;
+        console.log(array0);
+       }
+       getLastValue([12,10,20,130]);
+       
+       getLastValue(['asdf','ad']);
+
+     function doubleArray(a){
+       // const  array1=[];
+        //const  array2=[];
+         const b1=[];
+        for(i=0;i<a.length;i++){
+            let a2= a[i]*2;
+            b1.push(a2);
+        }
+        console.log(a);
+        console.log(b1);
+     }
+     doubleArray([10,20,30]);
+       
+
+
+     function increaseByNum(a,num){
+       // const  array1=[];
+        //const  array2=[];
+         const b1=[];
+        for(i=0;i<a.length;i++){
+            let a2= a[i]+num;
+            b1.push(a2);
+        }
+        console.log(a);
+        console.log(b1);
+     }
+     increaseByNum([10,14,16],5);
+
+
+
+     function addArrays(a,b){
+        const b1=[];
+
+        for(i=0;i<a.length;i++){
+            let a2= a[i]+num;
+            b1.push(a2);
+        }
+        console.log(a);
+        console.log(b1);
+     }
+     
+
+       </script>
+       
+    </body>
+
+</html>

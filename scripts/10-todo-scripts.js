@@ -1,8 +1,36 @@
 const Todo = [];
 function addTodo(){
-let input1= document.querySelector(".js-todo-input");
-input1= input1.value;
-console.log(input1);
-Todo.push(input1);
-console.log(Todo);
+    
+    let input1= document.querySelector(".js-todo-input");
+    const inputduedate = document.querySelector(".js-todo-duedate");
+    ;
+    const name = input1.value;
+    const duedate=inputduedate.value;
+    Todo.push({name,duedate});
+    input1.value = '';
+    inputduedate.value='';
+    console.log(Todo);
+    todoListHtmldsiplay();
 }
+function todoListHtmldsiplay(){
+    
+    let listTodo='';
+        for(let i=0;i<Todo.length;i++){
+            const todoObj= Todo[i];
+            const {name,duedate}=todoObj;
+            let a = `
+                <p>
+                ${name} - ${duedate}
+                <button onclick="
+                   Todo.splice(${i},1);
+                   todoListHtmldsiplay();
+                ">Delete</button>
+               <p>`;
+            listTodo += a; 
+        }
+        //console.log(listTodo);
+        
+        document.querySelector(".js-todo-display").innerHTML= listTodo;
+}
+
+

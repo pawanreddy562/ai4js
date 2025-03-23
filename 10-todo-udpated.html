@@ -2,13 +2,14 @@
 <html>
     <head>
         <title>Todo list Arrays</title>
-               
+        <link rel="stylesheet" href="/styles/10-todo-beautify.css"> 
     </head>
     <body>
        <p> Todo list</p>
        <input type="text" class="js-todo-input" placeholder="Todo Name">
+       <input type="date" class="js-todo-duedate" placeholder="DD-MM-yyyy">
        <button onclick="addTodo()">Add</button>
-       <div class="js-todo-display">     </div>
+       <div class="js-todo-display" class = "todo-grid">     </div>
        <script src='/scripts/10-todo-scripts.js'></script>     
     </body>
 </html>
