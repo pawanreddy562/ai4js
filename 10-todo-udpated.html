@@ -5,10 +5,13 @@
         <link rel="stylesheet" href="/styles/10-todo-beautify.css"> 
     </head>
     <body>
-       <p> Todo list</p>
-       <input type="text" class="js-todo-input" placeholder="Todo Name">
-       <input type="date" class="js-todo-duedate" placeholder="DD-MM-yyyy">
-       <button onclick="addTodo()">Add</button>
+      
+        <p> Todo list</p>
+      <div class="tod-grid-input">
+       <input type="text" class="js-todo-input name-input" placeholder="Todo Name">
+       <input type="date" class="js-todo-duedate date-input" placeholder="DD-MM-yyyy">
+       <button class="add-button" onclick="addTodo()">Add</button>
+       </div>
        <div class="js-todo-display todo-grid"></div>
        <script src='/scripts/10-todo-scripts.js'></script>     
     </body>

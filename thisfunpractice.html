@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<header>
+<title>Timer</title>
+</header>
+<body>
+    <button onclick="f1()"> click me</button>
+    <script>
+        let a ='sadfadsf';
+        function f1(){
+             // this.a = 'xssgf';
+             setTimeout(function(){
+
+                console.log(this.a);
+             }
+            ,3000);
+           
+        }
+        
+        
+       const f = ()=>{
+            
+            console.log(this.a);
+        }
+        console.log(this.a);
+        f();
+    </script>
+
+</body>
+</html>

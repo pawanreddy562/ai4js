@@ -20,7 +20,7 @@ function todoListHtmldsiplay(){
             const {name,duedate}=todoObj;
             let a = `
                 <div>${name}</div>  <div> ${duedate}</div>
-                <button onclick="
+                <button class="delete-button" onclick="
                    Todo.splice(${i},1);
                    todoListHtmldsiplay();
                 ">Delete</button>

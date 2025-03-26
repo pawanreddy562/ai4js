@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>advanced methods</title>
+    </head>
+    <body>
+        <script>
+            /*
+                const a = function(){
+                    console.log('function f');
+                }
+                console.log(a);
+
+               let b = [1,3,5];
+               let c = b;
+               console.log(c);
+               c.push('adf');
+               console.log(c);
+               console.log(b);
+               c = b.slice();
+               c.push('asdf');
+               console.log(c);
+               console.log(b);
+
+               const [d,e]=b;
+               console.log(`${d} ${e}`);
+
+               console.log(b.reverse());
+               console.log(b);
+
+
+               let i =0;
+               while(i<=10){
+               
+                if(i%3 ===0){
+                    i++;
+                    console.log(i);
+                    continue;
+
+                }
+                i++;
+               }
+            
+
+              function removeEgg(foods){
+                        const foodcopy=[];
+                        console.log(foods);
+            
+                         for(let j=0;j<foods.length;j++){
+                           
+                                const foodegg = foods[j];
+                               
+                                if(foodegg === 'egg'){
+                                    
+                                    continue;
+                                }
+                                foodcopy.push(foodegg); 
+                                
+                         }
+                         return foodcopy;
+               }
+              
+               console.log(removeEgg(['egg','chiken','leaves','egg','motton','pizza','burger','egg','chips','egg','biryani']));
+
+               const a = function(){
+                console.log('inside function a');
+               }
+
+               a();
+   */
+           
+                const a1 = {
+                    name : 'a', 
+                    fun :function(){console.log('this is object')}
+                }
+
+                a1.fun();
+                console.log(typeof a1.fun);
+                    
+        const settimeout1= setTimeout(function(){
+            console.log('timer is on');
+
+            console.log('this is after timer');
+        },3000
+        );
+        console.log('this is before timer')
+
+
+   const setint = setInterval(function(){
+    console.log('inside serafdaf');
+  
+   },4000);
+   clearInterval();
+        
+       
+        
+        
+        
+        </script>
+
+    </body>
+</html>
