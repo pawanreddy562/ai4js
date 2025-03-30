@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title> exercises</title>
+            <link type="stylesheets" href="/styles/12-exercise.css">
+    </head>
+    <body>
+            <div class = "js-addntimes-display"></div>
+            <p class = "js-addntimes-display"></p>
+            <script src="/scripts/12-excercise.js"></script>            
+            <button onClick="addnTimes(5)"> Add X Times</button>
+            <button onClick="addTwice()"> Add Twice</button>
+
+        <!-- adding 1 second change to finished one sec -->
+            <button class ="js-finsh-button" onClick ="changeToFinished()">Start</button>
+
+            <!-- adding add to cart-->
+             <button  onClick="addtoCart()"> Add to Cart</button>
+             <p class="js-Added"></p>
+
+        <!-- click event listener -->
+
+            <button class = "js-add1">Click1</button>
+
+            <script>
+
+            let buttonclick1 = document.querySelector('.js-add1');
+            const click1 = ()=>{console.log('click1');};
+           const click2 = ()=>{console.log('click2');};
+            if(buttonclick1){
+                buttonclick1.addEventListener('click',click1);
+                buttonclick1.removeEventListener('click',click1);
+            }
+
+            buttonclick1.removeEventListener('click',click1());
+
+            if(buttonclick1){
+                buttonclick1.addEventListener('click',click2);
+            }
+            </script>
+
+    </body>
+</html>

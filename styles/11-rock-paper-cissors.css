@@ -1,0 +1,32 @@
+body{
+    background-color:black;
+    color: white;
+    font-family: Arial;
+    
+}
+.title{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.move-icon{
+    height: 50px;
+    background-color: transparent;
+    
+}
+.move-button{
+    
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 80px;
+    border-color: azure;
+    padding: 30px;
+    margin-right: 20px;
+    
+}
+
+.reset-count,.AutoPlay{
+    padding: 15px 15px;
+    margin:25px;
+    border-radius: 60px;
+}
